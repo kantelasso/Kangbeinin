@@ -1,0 +1,61 @@
+kagbeinin 1.1
+// algorithmes qui marchent
+Public Class Form1
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim t1 As String
+        t1 = TextBox2.Text
+        If t1.Contains("ߓ߲") Then
+            MsgBox("ߞߊ߲ߠߊߘߌߦߊߟߊ߲ ߕߍ߫ ߓߌ߬ߟߊ߬ ߟߊ߫ ߛߌ߬ߙߊ߬ߕߊ ߟߎ߬ ߟߊ߫߸ ߊ߲ ߘߌ߫ ߊ߬ߟߎ߬ ߓߐ߫ ߊ߬ ߟߊ߫ ߊߟߎ߫ ߢߍ߫")
+            TextBox1.Text = "ߌ ߞߊߣߊ߬ ߞߊ߲ߠߊߘߌߦߊߟߊ߲ ߓߌ߬ߟߊ߬ ߛߌ߬ߙߊ߬ߕߊ ߟߎ߬ ߟߊ߫ ߘߋ߬ ߛߟߊߕߌ߮."
+        End If
+        t1 = t1.Replace("ߓ߲", "ߓ")
+        TextBox2.Text = t1
+
+    End Sub
+End Class
+
+
+// ce qui sont en phase de test
+
+t1 = t1.Replace(" ߊ ", " ߊ߬ ")
+        t1 = t1.Replace(" ߌ߫ ", " ߌ ")
+        t1 = t1.Replace(" ߒ߫ ", " ߒ ")
+        t1 = t1.Replace(" ߊ߲߫ ", " ߊ߲ ")
+        t1 = t1.Replace(" ߞߊ߲ߞߊ߲ ", " ߞߊ߲ߞߊ߲߫ ")
+        t1 = t1.Replace("*ߝ߲*", " *ߝ* ")
+        t1 = t1.Replace("*ߓ߲*", "*ߓ*")
+        t1 = t1.Replace(" *ߔ߲* ", " *ߔ* ")
+		
+//comment personnaliser un bouton msgbox
+site: http://www.mdf-xlpages.com/modules/publisher/item.php?itemid=42
+ou
+http://www.excelabo.net/excel/formulaires_affichage
+
+
+
+
+
+// Les reconnaissance des types de nom en nko!
+
+   Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim texte As String
+        texte = TextBox1.Text
+
+
+        'La reconnaissance des noms pressonnels en nko
+
+        If texte.EndsWith("߬") Or texte.EndsWith("߯") Or texte.EndsWith("߰") Or texte.EndsWith("߫") Or
+             texte.EndsWith("߲߬") Or texte.EndsWith("߲߯") Or texte.EndsWith("߲߰") Or texte.EndsWith("߲߫") Then
+
+            MsgBox("ߕߐ߮ ߣߌ߲߬ ߦߋ߫ ߞߋ߬ߟߋ߲߬ߠߊ߬ߕߐ߮ ߟߋ߬ ߘߌ߫")
+
+            'La reconnaissance des noms communs en nko
+        ElseIf texte.EndsWith("߲") Or texte.EndsWith("߮") Or texte.EndsWith("߱") Or
+            texte.EndsWith("߲߮") Or texte.EndsWith("߲߱") Or texte.EndsWith("߭") Or texte.EndsWith("߭ ") Then
+
+            MsgBox("ߕߐ߮ ߣߌ߲߬ ߦߋ߫ ߝߘߏ߬ߓߊ߬ߕߐ߮ ߟߋ߬ ߘߌ߫")
+
+        End If
+
+    End Sub
